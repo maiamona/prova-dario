@@ -32,7 +32,16 @@
         </table>
     </div>
   </div>
-
+  <div [ngClass]="classesCss" role="alert" *ngIf="mensagem">
+    <span [ngSwitch]="mensagem.tipo">
+        <strong *ngSwitchCase="'danger'">Erro!</strong>
+        <strong *ngSwitchCase="'warning'">Alerta!</strong>
+        <strong *ngSwitchCase="'success'">Sucesso!</strong>
+        <strong *ngSwitchDefault>Informação!</strong>
+    </span>
+    <!-- <strong>Well done!</strong> -->
+    {{mensagem.texto}}
+</div>
   <div class="card add-car">
       <h5 class="card-header">Adicionar/Atualizar carro</h5>
       <div class="card-body">
