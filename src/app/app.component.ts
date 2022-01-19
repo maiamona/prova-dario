@@ -92,7 +92,8 @@ export class AppComponent implements OnInit {
 
   private mostrarClasses(tipo: string): void {
     this.classesCss = {
-      'alert': true,
+      // 'alert': true, //erro
+      alert: true,
     };
     this.classesCss['alert-' + tipo] = true; // alert-danger, alert-success, ...
 
