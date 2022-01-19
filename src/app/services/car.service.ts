@@ -15,14 +15,14 @@ export class CarService {
    // Headers
    httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-  }
+  };
 
   // Obtem todos os carros
   getCars(): Observable<Car[]> {
     return this.httpClient.get<Car[]>(this.url)
       .pipe(
         retry(2),
-        catchError(this.handleError))
+        catchError(this.handleError));
   }
 
   // Obtem um carro pelo id
@@ -31,7 +31,7 @@ export class CarService {
       .pipe(
         retry(2),
         catchError(this.handleError)
-      )
+      );
   }
 
   // salva um carro
@@ -40,7 +40,7 @@ export class CarService {
       .pipe(
         retry(2),
         catchError(this.handleError)
-      )
+      );
   }
 
   // utualiza um carro
@@ -49,7 +49,7 @@ export class CarService {
       .pipe(
         retry(1),
         catchError(this.handleError)
-      )
+      );
   }
 
   // deleta um carro
@@ -58,7 +58,7 @@ export class CarService {
       .pipe(
         retry(1),
         catchError(this.handleError)
-      )
+      );
   }
 
   // Manipulação de erros
@@ -73,6 +73,6 @@ export class CarService {
     }
     console.log(errorMessage);
     return throwError(errorMessage);
-  };
+  }
 
 }

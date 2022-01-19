@@ -13,10 +13,16 @@
       "id": 4
     },
     {
-      "model": "BMW X",
+      "model": "BMW ",
       "color": "amarelo",
       "price": 555,
       "id": 5
+    },
+    {
+      "model": "Camaroo",
+      "color": "Preto",
+      "price": 44,
+      "id": 6
     }
   ]
 }
